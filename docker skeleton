@@ -1,0 +1,12 @@
+
+For deployment 
+1. docker login (username & password)
+2. docker build -t username/repositoryname:tag .
+3. docker push username/repositoryname:tag
+4. Login to SAP Cloud with cf login 
+5. Choose the organisation (2 for medallion in shiva's account) else ignore this step for trial 
+6. cf push appname(give name for application) --docker-image docker.io/username/repositoryname:tag --docker-username username
+
+Example: cf push sense --docker-image docker.io/yash/frrepo:v2 --docker-username yash
+
+
